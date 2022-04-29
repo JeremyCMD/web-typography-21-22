@@ -16,6 +16,8 @@ body {
 iframe {
 	grid-column-start: 2;
 	grid-row-start: 2;
+	clip-path: inset(77px 0px 72px 0px); /*72px down*/
+	transform: scale(1.2);
 }
 #closed-captions {
 	grid-column-start: 2;
@@ -61,8 +63,29 @@ iframe {
 ~ 7th paragraph ~
 ************** */
 
+.p6 {
+	left: -450px;
+	top: -250px;
+	text-transform: lowercase;
+}
 .p6 span {
 	color: red;
+	font-size: 1.2em;
+}
+
+/* ***************
+~ 43th paragraph ~
+*************** */
+
+.p42 span {
+	font-size: 1.5em;
+}
+
+/* ***************
+~ 44th paragraph ~
+*************** */
+
+.p43 span {
 	font-size: 2em;
 }
 
@@ -73,13 +96,17 @@ Sounds.
 	a sound starts.
 *********************************************  */
 
+.sound0 {
+	animation-name: shake;
+	animation-duration: 1.5s;
+}
 .sound1 {
 	transition: 0.5s ease-in-out;
 	background: red;
 }
 .sound1 iframe {
 	transition: 0.5s ease-in-out;
-	transform: scale(1.15);
+	transform: scale(1.6);
 }
 .sound2 {
 	transition: 0.5s ease-in-out;
@@ -87,11 +114,103 @@ Sounds.
 }
 .sound2 iframe {
 	transition: 0.5s ease-in-out;
-	transform: scale(1);
+	transform: scale(1.2);
 }
-.sound3{
+
+.sound3 {
 	animation-name: siren;
-	animation-duration: .8s;
+	animation-duration: 1.2s;
+}
+.sound5 iframe {
+	transform: translateY(-100px) scale(1.2);
+	transition: .2s;
+}
+.sound5 {
+	background-image: radial-gradient(circle 750px, red, black);
+	transition: background-image 1s ease-in-out;
+}
+.sound6 iframe{
+	transform: translateY(0px) scale(1.2);
+	transition: 1s;
+}
+.sound6 {
+	background: black;
+	transition: .2s;
+}
+.sound7 iframe {
+	transition: .1s ease-out;
+	transform: translateX(15px) scale(1.2);
+}
+.sound8 iframe {
+	transition: .5s ease-in-out;
+	transform: translateX(0px) scale(1.2);
+}
+.sound9 {
+	animation-name: shake;
+	animation-duration: 1s;
+}
+.sound10 {
+	background-image: radial-gradient(circle 500px, red, black);
+}
+.sound10 iframe {
+	transform: translateY(-100px) scale(1.2);
+	transition: .2s;
+}
+.sound11 {
+	background: black;
+	transition: .2s;
+}
+.sound11 iframe {
+	transform: translateY(0px) scale(1.2);
+	transition: 1s;
+}
+.sound13 {
+	background-image: radial-gradient(circle 500px, red, black);
+}
+.sound13 iframe {
+	transform: translateY(-100px) scale(1.2);
+	transition: .2s;
+}
+.sound14 {
+	background: black;
+	transition: .2s;
+}
+.sound14 iframe {
+	transform: translateY(0px) scale(1.2);
+	transition: .2s;
+}
+.sound15 iframe {
+	transition: 80s;
+	transform: scale(1);
+	clip-path: inset(77px 150px 72px 175px);
+}
+.sound16 iframe {
+	transition: .2s;
+	transform: scale(1.2);
+	clip-path: inset(77px 0px 72px 0px);
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  5% { transform: translate(-1px, -2px) rotate(-1deg); }
+  10% { transform: translate(-3px, 0px) rotate(1deg); }
+  15% { transform: translate(3px, 2px) rotate(0deg); }
+  20% { transform: translate(1px, -1px) rotate(1deg); }
+  25% { transform: translate(-1px, 2px) rotate(-1deg); }
+  30% { transform: translate(-3px, 1px) rotate(0deg); }
+  35% { transform: translate(3px, 1px) rotate(-1deg); }
+  40% { transform: translate(-1px, -1px) rotate(1deg); }
+  45% { transform: translate(1px, 2px) rotate(0deg); }
+  50% { transform: translate(1px, -2px) rotate(-1deg); }
+	55% { transform: translate(1px, 1px) rotate(0deg); }
+  60% { transform: translate(-1px, -2px) rotate(-1deg); }
+  65% { transform: translate(-3px, 0px) rotate(1deg); }
+  70% { transform: translate(3px, 2px) rotate(0deg); }
+  75% { transform: translate(1px, -1px) rotate(1deg); }
+  80% { transform: translate(-1px, 2px) rotate(-1deg); }
+  85% { transform: translate(-3px, 1px) rotate(0deg); }
+  90% { transform: translate(3px, 1px) rotate(-1deg); }
+  95% { transform: translate(-1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 2px) rotate(0deg); }
 }
 @keyframes siren {
 	0%{
@@ -110,36 +229,6 @@ Sounds.
 		background-image: linear-gradient(to left, red, black);
 	}
 	100%{
-		background: black;
+		background-image: radial-gradient(circle 10px, red, black);
 	}
-}
-.sound5 iframe {
-	transform: translateY(-50px);
-}
-.sound5 {
-	background-image: linear-gradient(red, black);
-	transition: .5s;
-}
-.sound6 iframe{
-	transform: translateY(0px);
-}
-.sound6 {
-	background: black;
-	transition: .5s;
-}
-.sound7 iframe {
-	transition: 0.2s ease-out;
-	transform: translateX(100px);
-}
-.sound8 iframe {
-	transition: 0.5s ease-in-out;
-	transform: translateX(0px);
-}
-.sound12 iframe {
-	transition: 80s;
-	transform: scale(1.5);
-}
-.sound13 iframe {
-	transition: .2s;
-	transform: scale(1);
 }
